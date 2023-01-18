@@ -6,6 +6,8 @@ const cardCss= document.getElementById("cardCss")
 const cardJavaScript= document.getElementById("cardJavaScript")
 const cardGame= document.getElementById("cardGame")
 const head= document.getElementById("headChange")
+const bodyChange= document.getElementById("bodyChange")
+const legsChange= document.getElementById("legsChange")
 function noLayout(){
     cards.classList.remove("vertical")
     cards.classList.remove("horizontal")
@@ -96,6 +98,58 @@ function selectHead4(){
        else if (currentPic===0) {
             currentPic=3
             head.src= arrayHead[currentPic]
+            return
+        }
+}
+let currentBody=0
+const arrayBody=["img/body1.png", "img/body2.png", "img/body3.png", "img/body4.png"]
+function selectBody2(){
+    if (currentBody<3) {
+        currentBody= currentBody + 1
+        bodyChange.src= arrayBody[currentBody]
+        return
+    }
+       else if (currentBody>=3) {
+            currentBody=0
+            bodyChange.src= arrayBody[currentBody]
+            return
+        }
+}
+function selectBody4(){
+    if (currentBody>0) {
+        currentBody= currentBody - 1
+        bodyChange.src= arrayBody[currentBody]
+        return
+    }
+       else if (currentBody===0) {
+            currentBody=3
+            bodyChange.src= arrayBody[currentBody]
+            return
+        }
+}
+let currentLegs= 0
+const arrayLegs=["img/legs1.png", "img/legs2.png", "img/legs3.png", "img/legs4.png"]
+function selectLegs2(){
+    if (currentLegs<3) {
+        currentLegs= currentLegs + 1
+        legsChange.src= arrayLegs[currentLegs]
+        return
+    }
+       else if (currentLegs>=3) {
+            currentLegs=0
+            legsChange.src= arrayLegs[currentLegs]
+            return
+        }
+}
+function selectLegs4(){
+    if (currentLegs>0) {
+        currentLegs= currentLegs - 1
+        legsChange.src= arrayLegs[currentLegs]
+        return
+    }
+       else if (currentLegs===0) {
+            currentLegs=3
+            legsChange.src= arrayLegs[currentLegs]
             return
         }
 }

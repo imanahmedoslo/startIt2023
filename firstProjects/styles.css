@@ -15,18 +15,6 @@ body {
 .chosenCard{
     display: none;
 }
-/* .verktøy{
-    display: none;
-}
-.html{
-    display: none;
-}
-.css{
-    display: none;
-}
-.js{
-    display: none;
-} */
 
 .header {
     color: white;
@@ -70,6 +58,8 @@ p {
 .vertical {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid {
